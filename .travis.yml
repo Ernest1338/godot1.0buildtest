@@ -1,6 +1,13 @@
 language: cpp
 compiler: 
   - gcc
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: "bin/godot.x11.tools.64"
+  skip_cleanup: true
+  on:
+    tags: true
 before_install:
   
 
