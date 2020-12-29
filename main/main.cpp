@@ -47,7 +47,6 @@
 #include "script_language.h"
 #include "io/resource_loader.h"
 
-#include "test_main.h"
 #include "os/dir_access.h"
 #include "core/io/ip.h"
 #include "scene/resources/packed_scene.h"
@@ -967,13 +966,6 @@ bool Main::start() {
 	};
 
 	if (test!="") {
-#ifdef DEBUG_ENABLED
-		main_loop = test_main(test,args);
-
-		if (!main_loop)
-			return false;
-
-#endif
 
 	} else if (script!="") {
 
