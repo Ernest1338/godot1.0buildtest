@@ -119,14 +119,7 @@ void Main::print_help(const char* p_binary) {
 #endif
 	OS::get_singleton()->print("\t-test [test] : Run a test.\n");
 	OS::get_singleton()->print("\t\t(");
-	const char **test_names=tests_get_names();
 	const char* coma = "";
-	while(*test_names) {
-	
-		OS::get_singleton()->print("%s%s", coma, *test_names);
-		test_names++;
-		coma = ", ";
-	}
 	OS::get_singleton()->print(")\n");
 	
 	OS::get_singleton()->print("\t-r WIDTHxHEIGHT\t : Request Screen Resolution\n");
