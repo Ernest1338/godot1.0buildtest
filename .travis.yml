@@ -12,6 +12,7 @@ before_install:
   
 
 before_script: 
+  - export TARGET_ARCH='x86'
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
   - sudo apt-get install -qq scons pkg-config libx11-dev libxcursor-dev build-essential libasound2-dev libfreetype6-dev libgl1-mesa-dev libglu-dev  
